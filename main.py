@@ -125,4 +125,8 @@ if __name__ == '__main__':
       sys.exit(0)
     else:
       answer2 = prompt(question2)
-      get_sentiments(answer2['prod_name'])
+      if(answer2['prod_name']==NULL):
+        print("Do not leave the product name to be blank")
+        continue
+      else:
+        get_sentiments(answer2['prod_name'])
